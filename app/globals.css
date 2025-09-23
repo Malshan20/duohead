@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 120 20% 98%;
+    --foreground: 120 10% 15%;
+    --card: 120 15% 96%;
+    --card-foreground: 120 10% 15%;
+    --popover: 120 15% 96%;
+    --popover-foreground: 120 10% 15%;
+    --primary: 142 76% 36%;
+    --primary-foreground: 120 20% 98%;
+    --secondary: 120 15% 92%;
+    --secondary-foreground: 120 10% 25%;
+    --muted: 120 15% 92%;
+    --muted-foreground: 120 10% 45%;
+    --accent: 142 76% 36%;
+    --accent-foreground: 120 20% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 120 15% 88%;
+    --input: 120 15% 88%;
+    --ring: 142 76% 36%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 120 15% 8%;
+    --foreground: 120 10% 90%;
+    --card: 120 15% 10%;
+    --card-foreground: 120 10% 90%;
+    --popover: 120 15% 10%;
+    --popover-foreground: 120 10% 90%;
+    --primary: 142 76% 45%;
+    --primary-foreground: 120 15% 8%;
+    --secondary: 120 15% 15%;
+    --secondary-foreground: 120 10% 80%;
+    --muted: 120 15% 15%;
+    --muted-foreground: 120 10% 60%;
+    --accent: 142 76% 45%;
+    --accent-foreground: 120 15% 8%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 120 15% 20%;
+    --input: 120 15% 20%;
+    --ring: 142 76% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.nature-bg {
+  background: linear-gradient(135deg, #a8e6cf 0%, #dcedc1 25%, #ffd3a5 50%, #a8e6cf 75%, #88d8c0 100%);
+}
+
+.nature-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .nature-card {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.floating-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.pulse-gentle {
+  animation: pulse-gentle 4s ease-in-out infinite;
+}
+
+@keyframes pulse-gentle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Brown theme for study planner calendar */
+.study-planner .rdp {
+  --rdp-cell-size: 40px;
+  --rdp-accent-color: #8b4513;
+  --rdp-background-color: #8b4513;
+  --rdp-accent-color-dark: #a0522d;
+  --rdp-background-color-dark: #a0522d;
+  --rdp-outline: 2px solid var(--rdp-accent-color);
+  --rdp-outline-selected: 2px solid var(--rdp-accent-color);
+}
+
+.study-planner .rdp-day_selected {
+  background-color: #8b4513;
+  color: white;
+}
+
+.study-planner .rdp-day_selected:hover {
+  background-color: #a0522d;
+}
+
+.study-planner .rdp-day_today {
+  color: #8b4513;
+  font-weight: bold;
+}
+
+.study-planner .rdp-button:hover:not([disabled]):not(.rdp-day_selected) {
+  background-color: #d2b48c;
+  color: #8b4513;
+}
+
+.study-planner .rdp-button:focus-visible:not([disabled]) {
+  outline: 2px solid #8b4513;
+  outline-offset: 2px;
+}
+
+.study-planner .rdp-nav_button:hover {
+  background-color: #d2b48c;
+  color: #8b4513;
+}
+
+/* Infinite scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+/* Pause animation on hover */
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Floating animation for math symbols */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
