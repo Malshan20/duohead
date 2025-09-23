@@ -626,7 +626,7 @@ export default function SettingsPage() {
             </div>
 
             <div className="mb-6 max-w-xs">
-              <Label htmlFor="payment-provider">Region</Label>
+              <Label htmlFor="payment-provider">Select Region</Label>
               <Select value={paymentProvider} onValueChange={setPaymentProvider as any}>
                 <SelectTrigger id="payment-provider">
                   <SelectValue placeholder="Select payment provider" />
