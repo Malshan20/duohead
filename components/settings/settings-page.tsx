@@ -632,7 +632,7 @@ export default function SettingsPage() {
                   <SelectValue placeholder="Select payment provider" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="stripe">International</SelectItem>
+                  <SelectItem value="stripe">Global</SelectItem>
                   <SelectItem value="paystack">Africa</SelectItem>
                 </SelectContent>
               </Select>
