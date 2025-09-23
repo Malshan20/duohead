@@ -632,8 +632,8 @@ export default function SettingsPage() {
                   <SelectValue placeholder="Select payment provider" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="stripe">International (Stripe)</SelectItem>
-                  <SelectItem value="paystack">Africa (Paystack)</SelectItem>
+                  <SelectItem value="stripe">International</SelectItem>
+                  <SelectItem value="paystack">Africa</SelectItem>
                 </SelectContent>
               </Select>
             </div>
